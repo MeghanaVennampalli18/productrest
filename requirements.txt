@@ -1,4 +1,4 @@
-#all required softwares
+#required softwares for project
 asgiref==3.7.2
 cement==2.8.2
 certifi==2023.7.22
