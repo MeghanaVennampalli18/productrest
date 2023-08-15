@@ -13,7 +13,7 @@ from rest_framework.permissions  import IsAuthenticated
 from django.http import Http404
 from rest_framework.exceptions import ValidationError
 from django.shortcuts import get_object_or_404
-# first commit
+
 
 @api_view(['POST'])
 def User_Register(request):
