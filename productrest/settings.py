@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'productrest',
     'rest_framework',
     'corsheaders',
+    'django_filters',
 ]
 
 
@@ -91,6 +92,11 @@ DATABASES = {
         'HOST':'database-1.crtklmbpfegt.us-east-1.rds.amazonaws.com',
         'PORT':'3306',
     }
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 3
 }
 
 

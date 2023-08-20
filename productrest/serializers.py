@@ -1,7 +1,5 @@
 from rest_framework import serializers
 from .models import *
-from django.contrib.auth.hashers import make_password
-
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -42,6 +40,13 @@ class CartSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cart
         fields = ['cart_id','user','product','quantity','product_name','product_image']
+
+class OrderSerializer(serializers.ModelSerializer):
+    product_name = serializers.CharField(source='product.name',read_only = True)
+    product_image = serializers.CharField(source='product.image',read_only = True)
+    class Meta:
+        model = Order
+        fields = ['order_id','user','product','quantity','order_date','order_price','address','product_name','product_image']
 
 # class CartSerializer(serializers.ModelSerializer):
 #     items=CartItemSerializer(many = True, read_only = True)
