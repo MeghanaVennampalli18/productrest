@@ -66,6 +66,19 @@ class Cart(models.Model):
     #     print(total_price)
     #     self.save()
 
+class Order(models.Model):
+    order_id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
+    user = models.UUIDField(default=uuid.uuid4,editable=False)
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+    order_date = models.DateField()
+    quantity = models.IntegerField(default=1)
+    order_price = models.FloatField(default=0)
+    address = models.CharField(max_length=200,blank=False)
+
+    def __unicode__(self):
+        return self.order_id
+
+
 # class CartItems(models.Model):
 #     cartitem_id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
 #     cart = models.ForeignKey(Cart,on_delete=models.CASCADE)

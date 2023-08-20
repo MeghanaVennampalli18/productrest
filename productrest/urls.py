@@ -37,6 +37,10 @@ urlpatterns = [
     path('api/rest/v1/usercartitems',views.User_CartItems),
     path('api/rest/v1/cartitemdelete/<uuid:cart_id>',views.CartItem_Delete),
     path('api/rest/v1/clearallitems',views.Clear_all_CartItems),
+    path('api/rest/v1/orderplace',views.Order_Place),
+    path('api/rest/v1/orderview',views.Order_View),
+    path('api/rest/v1/ordercart',views.Order_Cart),
+
 
     # path('api/rest/v1/cartview',views.Cart_View),
     # path('api/rest/v1/cartadd',views.Cart_Add),

@@ -1,11 +1,13 @@
-#required softwares for project
 asgiref==3.7.2
+awsebcli==3.20.7
+botocore==1.29.158
 cement==2.8.2
 certifi==2023.7.22
 charset-normalizer==3.2.0
 colorama==0.4.3
 Django==4.2.3
 django-cors-headers==4.2.0
+django-filter==23.2
 django-restframework==0.0.1
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.2.2
